@@ -26,7 +26,7 @@ function heyuCommand(args, callback) {
 };
 
 function heyuDeviceCommand(command, houseCode, unitCode, callback) {
-  if (houseCode.match(/[A-P]/i && unitCode.match(/[1-9]|1[0-6]/) {
+  if (houseCode.match(/[A-P]/i) && unitCode.match(/[1-9]|1[0-6]/)) {
     heyuCommand([command, String(houseCode) + String(unitCode)], callback);
   } else {
     console.log("Invalid house or unit code: " + houseCode + unitCode);
